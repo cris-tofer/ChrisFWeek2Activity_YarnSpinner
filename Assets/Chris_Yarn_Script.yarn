@@ -28,10 +28,10 @@ Narrator: Bartholomule is very lonely
 Narrator: But today a man desides to join Bartholomule at his table
 Random guy: Hey kid you seem to be rather bored
 Random guy: Wana play a fun litle game
--> sure
--> *say nothing*
+-> Sure
+-> *Say nothing*
     Random guy: Come on surely you don't have anything better to do?
-        -> fine
+        -> Fine
 Random guy: Its quite the simple game you will find the instructions in the control room
     The Random guy leaves
 <<jump noChoice>>
@@ -43,35 +43,50 @@ position: -518,-421
 You aproch a girl with bright red hair
 Bartholomule: Hey is this seat empty?
 Girl: No you can sit if you want
--> *ask for her name*
--> *say nothing*
+-> *Ask for her name*
+-> *Say nothing*
     <<jump noChoice>>
 Bartholomule: Thank you...
 Bartholomule: Whats your name?
 Jen: Its Jen
 Bartholomule: I dont think i've seen you aroung here very much are you new?
 Jen: Ya I'm working part time right now but I plan on working here after school
-Bartholomule: Cool have you checked out the co-ordination room yet?
+Bartholomule: Cool have you checked out the control room yet?
 Jen: Ya its really cool but also prety complicated
 Random man: HEY JEN!
-Jen: oops I think my trainer is calling me I've got to got
-Bartholomule: Ok I'll see you around
-<<jump noChoice>>
+Jen: Oops I think my trainer is calling me I've got to got
+Bartholomule: Who is your trainer?
+Jen: Its jake
+Bartholomule: Jake? I don't know of a Jake
+Jen: What?
+Bartholomule: Hey go talk to that mean looking guy over at the other table he is nicer than he lets on and a trainer too
+Bartholomule: I dont recognise that guy so I'm gonna get the supervisor and see if he knows about him
+You finish eating and leave the cafeteria
+You find the supervisor
+Bartholomule: Hey do you know a trainer named Jake?
+Supervisor: No why?
+Bartholomule: Aparently there is a new trainee being trained by a Jake she is talking to Jim right now. But the Jake guy just left the cafeteria
+Supervisor: Ok I'll go talk to him see who he is
+Bartholomule: Ok I've got to get back to work
+
+<<jump sheSurvives>>
 ===
 
 title: sitNextToGuy
 position: 34,-412
 ---
 Bartholomule: Hey Jim hows it going
-Jim: oh hey Bartholomule not much but aparently there are some new recruits
-Bartholomule: ah I see some fresh faces
-Jim: ya and more problems
-Bartholomule: come on man chill out you know you'll be the one to help them out the most when they ask
-Jim: tsk
+Jim: Oh hey Bartholomule not much but aparently there are some new recruits
+Bartholomule: Ah I see some fresh faces
+Jim: Ya and more problems
+Bartholomule: Come on man chill out you know you'll be the one to help them out the most when they ask
+Jim: Tsk
 Random Train operator: HEY JEN! It's time to get going!
-Jim: Welp I'ma get goin
+Jim: Hey do you recognise that guy?
+Bartholomule: No I don't
+Jim: I'm gonna go talk to him
 Jim gets up and leaves
-<<jump noChoice>>
+<<jump yourChoice>>
 ===
 
 title:noChoice
@@ -87,14 +102,55 @@ Random guy: Hello there Bartholomule
 -> Who are you
 -> *say nothing*
 The Narrator: I am the Narrator and I have set up a little problem for you to solve
-The Narrator: there is a train headed for the bottom track right now however you can change the track and divert the train
-The Narrator: but then you would be responsible for killing the woman on the top track
-The Narrator: so what will it be
+The Narrator: There is a train headed for the bottom track right now however you can change the track and divert the train
+The Narrator: But then you would be responsible for killing the woman on the top track
+The Narrator: So what will it be
 -> *Pull lever*
 -> *Do nothing*
 
 Narrator: You now watch as the train heads towards the five bodys laying on the track
 Narrator: The train does not change corse
+
+The End
+===
+
+title:sheSurvives
+---
+As you aproch the control room you notice that it's unusually quiet
+Upon entering the control room you see that it's compleatly empty and on the screen you see a set of train tracks
+On the bottom track there is five guys tied up on the track
+On the top track you see your supervisor
+You hear footsteps behind you
+Random guy: Hello there Bartholomule
+-> Who are you
+-> *say nothing*
+The Narrator: I am the Narrator and I have set up a little problem for you to solve
+The Narrator: There is a train headed for the bottom track right now however you can change the track and divert the train
+The Narrator: But then you will be responsible for killing your suppervisor on the top track
+The Narrator: So what will it be
+-> *Pull lever*
+-> *Do nothing*
+
+Narrator: You now watch as the train heads towards the five bodys laying on the track
+Narrator: The train does not change corse
+
+The End
+===
+
+title:yourChoice
+---
+You finish eating and leave the cafeteria
+As you aproch the control room you notice that it's unusually quiet
+Upon entering the control room you see that it's compleatly empty and on the screen you see a set of train tracks
+On the bottom track there is four guys tied up on the track
+There is no one on the top track
+There is a train heading for the bottom track
+
+-> *Change track*
+    The track changes and the train goes to the top track
+    You have saved the lives of the people on the bottom track
+-> *Do nothing*
+    The train goes down the bottom path killing the helpless people trapped on the track
 
 The End
 ===
